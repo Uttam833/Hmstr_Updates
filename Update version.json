@@ -1,0 +1,11 @@
+{
+  "versionCode": 13,
+  "versionName": "1.3",
+  "forceUpdate": true,
+  "apkUrl": "https://github.com/Uttam833/HitMaal_Updates/releases/download/V1.3/HitMaal_V1.3.apk",
+  "changelog": [
+    "Improved performance",
+    "Bug fixes",
+    "New UI enhancements"
+  ]
+}
