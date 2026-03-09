@@ -1,8 +1,8 @@
 {
-  "versionCode": 19,
-  "versionName": "1.9",
+  "versionCode": 20,
+  "versionName": "2.0",
   "forceUpdate": true,
-  "apkUrl": "https://github.com/Uttam833/Hmstr_Updates/releases/download/Hmstr_V1.9/Hmstr_V1.9.apk",
+  "apkUrl": "https://github.com/Uttam833/Hmstr_Updates/releases/download/Hmstr_V2.0/Hmstr_V2.0.apk",
   "changelog": [
     "Improved performance",
     "Bug fixes",
