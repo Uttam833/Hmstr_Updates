@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Download HitMaal</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
+}
+
+.header{
+background:white;
+padding:20px;
+display:flex;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.icon{
+width:100px;
+border-radius:20px;
+margin-right:15px;
+}
+
+.appinfo h1{
+margin:0;
+font-size:26px;
+}
+
+.version{
+color:#666;
+font-size:15px;
+margin-top:5px;
+}
+
+.download-btn{
+display:block;
+background:#28a745;
+color:white;
+text-align:center;
+padding:15px;
+border-radius:8px;
+font-size:18px;
+text-decoration:none;
+margin-top:10px;
+}
+
+.telegram-btn{
+display:block;
+background:#0088cc;
+color:white;
+text-align:center;
+padding:12px;
+border-radius:8px;
+text-decoration:none;
+margin-top:8px;
+}
+
+.container{
+padding:20px;
+}
+
+.section{
+background:white;
+padding:15px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.screenshots{
+display:flex;
+overflow-x:auto;
+gap:10px;
+}
+
+.screenshots img{
+height:350px;
+border-radius:10px;
+}
+
+ul{
+padding-left:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<img src="icon.png" class="icon">
+
+<div class="appinfo">
+
+<h1>HitMaal</h1>
+
+<div class="version">
+Latest Version: <span id="version">Loading...</span>
+</div>
+
+<a id="downloadBtn" class="download-btn">
+⬇ Download Latest APK
+</a>
+
+<a href="https://t.me/hitmaal" class="telegram-btn">
+Join Telegram Channel
+</a>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="section">
+
+<h2>Screenshots</h2>
+
+<div class="screenshots">
+
+<img src="s1.jpg">
+<img src="s2.jpg">
+<img src="s3.jpg">
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>What's New</h2>
+
+<ul id="changelog">
+Loading...
+</ul>
+</div>
+  
+
+  <div class="section">
+<h2>About this App</h2>
+
+<p>
+Are you Looking for adult app? where you can watch 18+ webseries video for free.
+</p>
+  <p>
+    HitMaal is a lightweight 18+ Hindi Webseries app with a simple and smooth interface.<br>
+    The app is completely FREE for lifetime, ad-free, and includes a biometric lock to keep your viewing private. <br>
+    Designed for adult users who want a fast, secure, and distraction-free streaming experience. 🎬🔒
+  </p>
+  </div>
+
+  
+<div class="section">
+<h2>Install Guide</h2>
+
+<p>
+1️⃣ Download APK  </p> 
+  <p>
+2️⃣ Enable "Install Unknown Apps" </p>
+  <p>
+3️⃣ Install and enjoy 🚀
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const repo = "uttam833/HitMaal_Updates";
+
+fetch(`https://api.github.com/repos/${repo}/releases/latest`)
+.then(res => res.json())
+.then(data => {
+
+document.getElementById("version").innerText = data.tag_name;
+
+document.getElementById("downloadBtn").href =
+data.assets[0].browser_download_url;
+
+let notes = data.body.split("\n");
+
+let html = "";
+
+notes.forEach(line=>{
+html += "<li>"+line+"</li>";
+});
+
+document.getElementById("changelog").innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>
